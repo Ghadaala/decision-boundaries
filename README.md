@@ -1,78 +1,74 @@
-# What Happens After a Request Is Confirmed?
+# Decision Logic Notes
 
-Most systems focus heavily on getting a request confirmed.
+This repository documents a series of written case studies exploring how real-world systems behave under pressure — not from a technical performance perspective, but from a **decision logic and role-boundary perspective**.
 
-Buttons are clear.
-Flows are optimized.
-The confirmation moment feels like success.
+The focus here is not on implementation, code, or tools.
+Instead, these notes examine **how systems fail quietly** when:
+- decision ownership is unclear,
+- boundaries between roles drift,
+- or systems attempt to be overly flexible.
 
-But in practice, this is where many problems quietly begin.
+---
 
-Once a request is confirmed, the system often keeps “thinking” on behalf of everyone involved:
+## What This Repository Is
 
-It proceeds automatically.
+- A collection of **behavioral case studies**.
+- Each case isolates a single decision-related failure mode.
+- Scenarios are intentionally simple and technology-agnostic.
+- The goal is clarity, not completeness.
 
-It makes assumptions.
+These notes are written to be readable by:
+- system designers,
+- product and operations teams,
+- engineers,
+- and anyone interested in how complex systems maintain trust.
 
-It optimizes for speed, not clarity.
+---
 
-At this point, an important question is rarely made explicit:
+## What This Repository Is Not
 
-What is allowed to change after confirmation — and what is not?
+- Not a product specification.
+- Not an implementation guide.
+- Not a framework or methodology.
+- Not tied to a specific industry or technology stack.
 
-## The Hidden Risk
+The cases focus on **logic**, not solutions.
 
-When a system continues to reason freely after confirmation, several things start to happen:
+---
 
-Users assume they can still modify outcomes.
+## Structure
 
-Staff assume the system has already “decided correctly.”
+Each case is documented as a standalone markdown file:
 
-Accountability becomes blurred.
+- `case-01-...`  
+- `case-02-...`  
 
-Nothing breaks immediately.
-But trust starts to erode.
+Each file describes:
+- the scenario,
+- the decision boundary involved,
+- why failure occurs,
+- and what insight can be extracted.
 
-The system appears intelligent, yet no one is fully certain:
+Simple decision flows may be included where helpful.
 
-Who owns the decision now?
+---
 
-Who can override it?
+## Why These Notes Exist
 
-And under which conditions?
+Modern systems increasingly rely on automation and AI.
+As intelligence increases, **decision boundaries become more critical — not less**.
 
-## Confirmation Is a Boundary, Not a Trigger
+These notes aim to make those boundaries visible.
 
-In well-designed systems, confirmation is not a green light for unlimited automation.
+They are part of an ongoing personal effort to:
+- think more clearly about system behavior,
+- document patterns before they scale into problems,
+- and build a shared language around decision ownership.
 
-It is a boundary.
+---
 
-After confirmation:
+## Status
 
-Some decisions must become fixed.
+This repository is intentionally incomplete and evolving.
+New cases are added gradually as part of a continuous thinking process.
 
-Some paths must be closed.
-
-Some authority must clearly return to humans.
-
-When this boundary is not defined, systems tend to overreach — trying to be helpful, flexible, or “smart,” while quietly introducing instability.
-
-## Why This Matters
-
-Most operational failures don’t come from bad intentions or poor technology.
-
-They come from unclear decision boundaries.
-
-Especially in service-oriented systems, confirmation should signal:
-
-This part is now settled.
-This part still requires judgment.
-
-Designing that distinction early prevents confusion later — without adding complexity.
-
-## Closing Thought
-
-Automation works best when it knows when to stop.
-
-Not every moment after confirmation needs intelligence.
-Some moments need restraint.
