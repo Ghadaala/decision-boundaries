@@ -1,4 +1,4 @@
-# Decision Boundary After Confirmation
+# Case 01 —Decision Boundary After Confirmation
 
 ## Context
 
