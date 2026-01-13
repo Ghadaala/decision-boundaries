@@ -44,11 +44,12 @@ Ensure every path leads to a defined termination or transition
 ## Decision States
 
 The system recognizes three distinct states:
-
+```
 State	Description	System Action
 Confirmed	User confirms the order	Proceed to next phase
 Cancelled	User cancels the order	Terminate order
 Inactive	User takes no action	Retry with limit, then cancel
+```
 
 No other states are permitted.
 
